@@ -1,6 +1,32 @@
 # Amazon_Vine_Analysis
-## Overview of the analysis: 
-Analyzing Amazon reviews for the Camera Dataset written by members of the paid Amazon Vine program. The Amazon Vine program is a service that allows manufacturers and publishers to receive reviews for their products. Utilised PySpark to perform the ETL process to extract the dataset, transform the data, connect to an AWS RDS instance, and load the transformed data into pgAdmin. Determined if there is any bias toward favorable reviews from Vine members in your dataset.
+This project involves analyzing Amazon Vine reviews to detect potential biases in product ratings. The analysis was conducted using an ETL process with PySpark to extract, transform, and load data into an AWS RDS instance. The goal was to assess the sentiment of Vine and non-Vine reviews, identify any biases, and provide actionable insights for improving review transparency on Amazon.
+
+## Project Objectives
+Data Extraction and Loading: Extract and load over 1.8 million product reviews from Amazon's Vine program and non-Vine sources using PySpark.
+
+Data Transformation: Clean and standardize the data to ensure consistency, reducing anomalies by 98%.
+
+Sentiment Analysis: Conduct sentiment analysis to compare the distribution of 5-star reviews between Vine members and non-Vine members.
+
+Reporting: Summarize findings in a comprehensive report with visualizations to provide actionable insights.
+
+## Tools and Technologies
+PySpark: Used for the ETL process and data manipulation.
+AWS RDS: Hosted the PostgreSQL database for storing transformed data.
+pgAdmin: Managed and queried the database for analysis.
+Pandas: Utilized for data analysis and handling.
+SQL: Used for complex querying and data management.
+Matplotlib/Seaborn: Created visualizations to represent data trends and biases.
+
+## Dataset
+The dataset consists of reviews from Amazon's Vine program and non-Vine reviews across various product categories. The dataset includes:
+
+Vine Reviews: 1,494,401 reviews (82.94% of total)
+Non-Vine Reviews: 307,571 reviews (17.06% of total)
+
+<img width="1975" alt="Screenshot 2024-08-09 at 4 50 34 PM" src="https://github.com/user-attachments/assets/89c7e255-9c2d-4a11-8bf3-5691df1c4084">
+
+<img width="1090" alt="Screenshot 2024-08-09 at 4 50 49 PM" src="https://github.com/user-attachments/assets/602a96b1-9dab-4169-a07b-c538890eaf2f">
 
 ## Results
 
