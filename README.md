@@ -2,6 +2,7 @@
 This project involves analyzing Amazon Vine reviews to detect potential biases in product ratings. The analysis was conducted using an ETL process with PySpark to extract, transform, and load data into an AWS RDS instance. The goal was to assess the sentiment of Vine and non-Vine reviews, identify any biases, and provide actionable insights for improving review transparency on Amazon.
 
 [Click here to view the Jupyter Notebook - Amazon Review ETL](https://github.com/michelleraj/Amazon_Vine_Analysis/blob/main/Amazon_review_ETL.ipynb)
+
 [Click here to view the Jupyter Notebook- Vine Review Analysis](https://github.com/michelleraj/Amazon_Vine_Analysis/blob/main/Vine_Review_Analysis.ipynb)
 
 
