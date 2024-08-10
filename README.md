@@ -17,10 +17,15 @@ Reporting: Summarize findings in a comprehensive report with visualizations to p
 
 ## Tools and Technologies
 PySpark: Used for the ETL process and data manipulation.
+
 AWS RDS: Hosted the PostgreSQL database for storing transformed data.
+
 pgAdmin: Managed and queried the database for analysis.
+
 Pandas: Utilized for data analysis and handling.
+
 SQL: Used for complex querying and data management.
+
 Matplotlib/Seaborn: Created visualizations to represent data trends and biases.
 
 ## Dataset
