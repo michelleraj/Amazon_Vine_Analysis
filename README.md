@@ -1,4 +1,4 @@
-# Amazon_Vine_Analysis
+# Amazon Vine Program Analysis: An ETL Pipeline for Bias Detection
 This project involves analyzing Amazon Vine reviews to detect potential biases in product ratings. The analysis was conducted using an ETL process with PySpark to extract, transform, and load data into an AWS RDS instance. The goal was to assess the sentiment of Vine and non-Vine reviews, identify any biases, and provide actionable insights for improving review transparency on Amazon.
 
 [Click here to view the Jupyter Notebook - Amazon Review ETL](https://github.com/michelleraj/Amazon_Vine_Analysis/blob/main/Amazon_review_ETL.ipynb)
@@ -6,27 +6,59 @@ This project involves analyzing Amazon Vine reviews to detect potential biases i
 [Click here to view the Jupyter Notebook- Vine Review Analysis](https://github.com/michelleraj/Amazon_Vine_Analysis/blob/main/Vine_Review_Analysis.ipynb)
 
 
-## Project Objectives
-Data Extraction and Loading: Extract and load over 1.8 million product reviews from Amazon's Vine program and non-Vine sources using PySpark.
+## 📌 Overview
+This project engineered a **scalable ETL pipeline** to process over **1.8 million Amazon product reviews**. The goal was to assess potential rating bias in **Amazon's Vine program** (where reviewers are compensated) versus organic customer reviews.  
 
-Data Transformation: Clean and standardize the data to ensure consistency, reducing anomalies by 98%.
+The project automated the data processing and validation workflow, transforming raw data into a clean, analyzable dataset hosted in the cloud. It culminated in a **data-driven report on review sentiment**.
 
-Sentiment Analysis: Conduct sentiment analysis to compare the distribution of 5-star reviews between Vine members and non-Vine members.
+**Key Question:**  
+_Do Vine members show a statistically significant bias towards 5-star reviews compared to non-paid reviewers?_
 
-Reporting: Summarize findings in a comprehensive report with visualizations to provide actionable insights.
+---
 
-## Tools and Technologies
-PySpark: Used for the ETL process and data manipulation.
+## ⚙️ Project Architecture & Workflow
+- **Extract**: Raw review data sourced from [Amazon’s public datasets](https://s3.amazonaws.com/amazon-reviews-pds/tsv/index.txt).  
+- **Transform & Clean**:  
+  - Used **PySpark** for large-scale data processing.  
+  - Performed data cleaning, deduplication, and standardization.  
+  - Improved data quality, reducing anomalies by **98%**.  
+- **Load**: Cleaned data stored in **PostgreSQL** on **AWS RDS** for efficient querying.  
+- **Analysis & Reporting**:  
+  - Analyzed structured data using **SQL** and **Pandas**.  
+  - Generated visualizations to uncover review bias patterns.  
 
-AWS RDS: Hosted the PostgreSQL database for storing transformed data.
+---
 
-pgAdmin: Managed and queried the database for analysis.
+## 🛠 Tools & Technologies
+- **ETL & Big Data Processing**: PySpark  
+- **Cloud Database & Hosting**: AWS RDS  
+- **Database Management**: PostgreSQL, pgAdmin  
+- **Analysis & Visualization**: SQL, Pandas, Matplotlib, Seaborn  
+- **Version Control**: Git, GitHub  
 
-Pandas: Utilized for data analysis and handling.
+---
 
-SQL: Used for complex querying and data management.
+## 📊 Key Findings & Business Impact
+The analysis provided quantifiable insights into review patterns:
 
-Matplotlib/Seaborn: Created visualizations to represent data trends and biases.
+- ✅ **Positive bias detected**: Vine reviews had a **higher percentage of 5-star ratings** compared to organic reviews.  
+- 💡 **Actionable insight**: Highlights potential incentives in review systems, important for **transparency and consumer trust**.  
+
+---
+
+## 📈 Visualizations
+The findings were summarized with dashboards and charts, including:
+
+- Total Review Volume (Vine vs. Non-Vine)  
+- Comparison of 5-Star Review Counts  
+- Percentage of 5-Star Reviews by Group (key bias metric)  
+
+---
+
+## 🚀 Business Value
+This pipeline provides Amazon (and similar platforms) with a **scalable, automated method** to detect review bias, supporting **fairness, transparency, and data-driven decision-making**.
+
+
 
 ## Dataset
 The dataset consists of reviews from Amazon's Vine program and non-Vine reviews across various product categories. The dataset includes:
